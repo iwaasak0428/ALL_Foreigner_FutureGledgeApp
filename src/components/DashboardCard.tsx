@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, FileText } from "lucide-react"
 import { Badge } from "@/components/ui/Badge"
 
 interface DashboardCardProps {
@@ -9,6 +9,7 @@ interface DashboardCardProps {
     features: string[]
     players: { label: string; type: "admin" | "company" | "foreigner" | "agency" | "other" }[]
     href: string
+    lpUrl?: string
     isCrossCutting?: boolean
     isLegacy?: boolean
     icon?: React.ReactNode
@@ -21,6 +22,7 @@ export function DashboardCard({
     features,
     players,
     href,
+    lpUrl = "#",
     isCrossCutting = false,
     isLegacy = false,
     icon,
@@ -58,9 +60,7 @@ export function DashboardCard({
                 </div>
             </div>
 
-            <p className="mb-6 text-sm leading-relaxed text-slate-600">
-                {description}
-            </p>
+            {/* Description removed as per request */}
 
             <div className="mb-6 flex-1">
                 <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
@@ -90,7 +90,7 @@ export function DashboardCard({
                 </div>
             </div>
 
-            <div className="mt-auto pt-4 border-t border-slate-100">
+            <div className="mt-auto pt-4 border-t border-slate-100 flex flex-col gap-2">
                 <Link
                     href={href}
                     className={`group/btn flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold transition-all ${isCrossCutting
@@ -105,7 +105,18 @@ export function DashboardCard({
                         <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     )}
                 </Link>
+
+                {!isLegacy && (
+                    <Link
+                        href={lpUrl}
+                        className="flex w-full items-center justify-center gap-2 rounded-lg py-2 text-sm font-medium text-slate-500 hover:bg-slate-50 hover:text-slate-900 transition-colors"
+                    >
+                        詳細を確認する
+                        <FileText className="h-3 w-3" />
+                    </Link>
+                )}
             </div>
         </div>
     )
 }
+
