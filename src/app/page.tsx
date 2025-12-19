@@ -24,27 +24,27 @@ import Link from "next/link"
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-brand-50/50 p-8 md:p-12">
-            <div className="mx-auto max-w-7xl space-y-20">
+        <main className="min-h-screen bg-brand-50/50 p-6 md:p-10">
+            <div className="mx-auto max-w-5xl space-y-12">
                 {/* Header Section */}
-                <div className="space-y-4 text-center">
-                    <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                <div className="space-y-2 text-center">
+                    <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                         Global Talent Platform
                     </h1>
-                    <p className="mx-auto max-w-2xl text-lg text-slate-600">
+                    <p className="mx-auto max-w-2xl text-base text-slate-600">
                         2つの事業を推進するためのマルチプロダクト
                     </p>
                 </div>
 
                 {/* Core Products Layer - Laptop Style */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                     <div className="relative flex justify-center">
-                        <span className="bg-white/50 px-3 text-sm font-semibold text-slate-500 uppercase tracking-wider backdrop-blur-sm rounded-full">
+                        <span className="bg-white/50 px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider backdrop-blur-sm rounded-full">
                             Core Products / コアプロダクト
                         </span>
                     </div>
 
-                    <div className="grid gap-12 lg:grid-cols-2">
+                    <div className="grid gap-8 lg:grid-cols-2">
                         {/* Talent Management */}
                         <div className="group space-y-4">
                             <div className="text-center">
