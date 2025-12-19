@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors - Trustworthy Blue/Navy */
-  --brand-50: #f0f5ff;
-  --brand-100: #e0ebff;
-  --brand-200: #c2d6ff;
-  --brand-300: #94b5ff;
-  --brand-400: #5c8aff;
-  --brand-500: #3b66f5;
-  --brand-600: #2546eb;
-  --brand-700: #1d35c4;
-  --brand-800: #1e2c9e;
-  --brand-900: #1e277d;
-  --brand-950: #13184b;
+  /* Brand Colors - Corporate Blue (#2f5aa3) */
+  --brand-50: #f2f7fc;
+  --brand-100: #e1eff9;
+  --brand-200: #c6def2;
+  --brand-300: #9ebfe8;
+  --brand-400: #6d9adb;
+  --brand-500: #4678cc;
+  --brand-600: #2f5aa3;
+  /* Primary Corporate Color */
+  --brand-700: #264885;
+  --brand-800: #223d6d;
+  --brand-900: #203459;
+  --brand-950: #142138;
 
   /* Neutral Colors - Clean & Professional */
   --slate-50: #f8fafc;
@@ -28,34 +29,44 @@
   --slate-950: #020617;
 
   /* Semantic Colors */
-  --background: #f8fafc; /* slate-50 */
-  --foreground: #0f172a; /* slate-900 */
-  
+  --background: #f8fafc;
+  /* slate-50 */
+  --foreground: #0f172a;
+  /* slate-900 */
+
   --card: #ffffff;
   --card-foreground: #0f172a;
-  
+
   --popover: #ffffff;
   --popover-foreground: #0f172a;
-  
-  --primary: #1d35c4; /* brand-700 */
+
+  --primary: #1d35c4;
+  /* brand-700 */
   --primary-foreground: #ffffff;
-  
-  --secondary: #f1f5f9; /* slate-100 */
+
+  --secondary: #f1f5f9;
+  /* slate-100 */
   --secondary-foreground: #0f172a;
-  
-  --muted: #f1f5f9; /* slate-100 */
-  --muted-foreground: #64748b; /* slate-500 */
-  
-  --accent: #f1f5f9; /* slate-100 */
+
+  --muted: #f1f5f9;
+  /* slate-100 */
+  --muted-foreground: #64748b;
+  /* slate-500 */
+
+  --accent: #f1f5f9;
+  /* slate-100 */
   --accent-foreground: #0f172a;
-  
+
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  --border: #e2e8f0; /* slate-200 */
-  --input: #e2e8f0; /* slate-200 */
-  --ring: #1d35c4; /* brand-700 */
-  
+  --border: #e2e8f0;
+  /* slate-200 */
+  --input: #e2e8f0;
+  /* slate-200 */
+  --ring: #1d35c4;
+  /* brand-700 */
+
   --radius: 0.5rem;
 }
 
@@ -71,35 +82,35 @@
   --color-brand-800: var(--brand-800);
   --color-brand-900: var(--brand-900);
   --color-brand-950: var(--brand-950);
-  
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  
+
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-  
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  
+
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -109,6 +120,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;

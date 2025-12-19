@@ -57,6 +57,7 @@ export default function Home() {
                             href="/talent"
                             lpUrl="#"
                             icon={<Users className="h-6 w-6" />}
+                            showFeatures={false}
                         />
 
                         <DashboardCard
@@ -77,6 +78,7 @@ export default function Home() {
                             href="/support"
                             lpUrl="#"
                             icon={<HeartHandshake className="h-6 w-6" />}
+                            showFeatures={false}
                         />
 
                         <DashboardCard
@@ -97,6 +99,7 @@ export default function Home() {
                             href="/document"
                             lpUrl="#"
                             icon={<FileText className="h-6 w-6" />}
+                            showFeatures={false}
                         />
                     </div>
                 </div>
@@ -129,6 +132,7 @@ export default function Home() {
                             lpUrl="#"
                             isCrossCutting={true}
                             icon={<LayoutDashboard className="h-6 w-6" />}
+                            showFeatures={false}
                         />
                     </div>
                 </div>

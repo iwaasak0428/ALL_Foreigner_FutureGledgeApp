@@ -13,6 +13,7 @@ interface DashboardCardProps {
     isCrossCutting?: boolean
     isLegacy?: boolean
     icon?: React.ReactNode
+    showFeatures?: boolean
 }
 
 export function DashboardCard({
@@ -26,12 +27,13 @@ export function DashboardCard({
     isCrossCutting = false,
     isLegacy = false,
     icon,
+    showFeatures = true,
 }: DashboardCardProps) {
     return (
         <div
             className={`group relative flex flex-col rounded-xl border p-6 transition-all duration-300 hover:shadow-lg ${isCrossCutting
-                    ? "border-brand-200 bg-gradient-to-br from-brand-50 to-white ring-1 ring-brand-100"
-                    : "border-slate-200 bg-white hover:border-brand-200"
+                ? "border-brand-200 bg-gradient-to-br from-brand-50 to-white ring-1 ring-brand-100"
+                : "border-slate-200 bg-white hover:border-brand-200"
                 } ${isLegacy ? "opacity-75 grayscale-[0.3]" : ""}`}
         >
             {isCrossCutting && (
@@ -62,19 +64,21 @@ export function DashboardCard({
 
             {/* Description removed as per request */}
 
-            <div className="mb-6 flex-1">
-                <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    主要機能
-                </h4>
-                <ul className="space-y-2">
-                    {features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
-                            <span className="mt-1.5 h-1 w-1 rounded-full bg-brand-400" />
-                            {feature}
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            {showFeatures && (
+                <div className="mb-6 flex-1">
+                    <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                        主要機能
+                    </h4>
+                    <ul className="space-y-2">
+                        {features.map((feature, i) => (
+                            <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                                <span className="mt-1.5 h-1 w-1 rounded-full bg-brand-400" />
+                                {feature}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
 
             <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
@@ -94,8 +98,8 @@ export function DashboardCard({
                 <Link
                     href={href}
                     className={`group/btn flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold transition-all ${isCrossCutting
-                            ? "bg-brand-600 text-white shadow-md shadow-brand-200 hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-300"
-                            : "bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-brand-700 hover:ring-brand-200"
+                        ? "bg-brand-600 text-white shadow-md shadow-brand-200 hover:bg-brand-700 hover:shadow-lg hover:shadow-brand-300"
+                        : "bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-brand-700 hover:ring-brand-200"
                         }`}
                 >
                     {isLegacy ? "詳細を見る" : "プロダクトを開く"}
