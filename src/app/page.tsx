@@ -24,7 +24,7 @@ import Link from "next/link"
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-slate-50 p-8 md:p-12">
+        <main className="min-h-screen bg-brand-50/50 p-8 md:p-12">
             <div className="mx-auto max-w-7xl space-y-20">
                 {/* Header Section */}
                 <div className="space-y-4 text-center">
@@ -39,12 +39,12 @@ export default function Home() {
                 {/* Core Products Layer - Laptop Style */}
                 <div className="space-y-8">
                     <div className="relative flex justify-center">
-                        <span className="bg-slate-50 px-3 text-sm font-semibold text-slate-500 uppercase tracking-wider">
+                        <span className="bg-white/50 px-3 text-sm font-semibold text-slate-500 uppercase tracking-wider backdrop-blur-sm rounded-full">
                             Core Products / コアプロダクト
                         </span>
                     </div>
 
-                    <div className="grid gap-12 lg:grid-cols-3">
+                    <div className="grid gap-12 lg:grid-cols-2">
                         {/* Talent Management */}
                         <div className="group space-y-4">
                             <div className="text-center">
@@ -174,84 +174,76 @@ export default function Home() {
                                 <p className="text-sm text-slate-500">複雑な申請書類の自動作成</p>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* TaskPorta Section */}
-                <div className="space-y-8">
-                    <div className="relative flex justify-center">
-                        <span className="bg-slate-50 px-3 text-sm font-semibold text-slate-500 uppercase tracking-wider">
-                            Platform Foundation / 統合基盤
-                        </span>
-                    </div>
-
-                    <div className="mx-auto max-w-4xl group space-y-4">
-                        <div className="text-center">
-                            <span className="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-sm font-bold text-white shadow-md">
-                                全社横断タスク管理
-                            </span>
-                        </div>
-                        <Link href="/task-porta" className="block transition-transform duration-300 hover:-translate-y-2">
-                            <LaptopMockup className="bg-white">
-                                <div className="flex h-full flex-col bg-slate-50">
-                                    {/* TaskPorta Mock Header */}
-                                    <div className="flex items-center justify-between border-b bg-white px-4 py-2">
-                                        <div className="flex items-center gap-2">
-                                            <div className="flex h-5 w-5 items-center justify-center rounded bg-brand-600 text-white">
-                                                <CheckCircle2 className="h-3 w-3" />
-                                            </div>
-                                            <div className="h-2 w-20 rounded-full bg-slate-800" />
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <div className="h-6 w-16 rounded border border-slate-200" />
-                                            <div className="h-6 w-6 rounded-full bg-lime-500" />
-                                        </div>
-                                    </div>
-                                    {/* TaskPorta Mock Content */}
-                                    <div className="flex-1 p-4 grid grid-cols-2 gap-4">
-                                        <div className="space-y-2">
-                                            <div className="h-3 w-24 rounded bg-slate-300" />
-                                            <div className="rounded-lg border border-slate-200 bg-white p-3">
-                                                <div className="flex gap-2 mb-3">
-                                                    <div className="h-4 w-10 rounded bg-green-100" />
-                                                    <div className="h-4 w-10 rounded bg-purple-100" />
+                        {/* TaskPorta (Moved to Core Products) */}
+                        <div className="group space-y-4">
+                            <div className="text-center">
+                                <span className="inline-block rounded-full bg-brand-600 px-4 py-1.5 text-sm font-bold text-white shadow-md">
+                                    全社横断タスク管理
+                                </span>
+                            </div>
+                            <Link href="/task-porta" className="block transition-transform duration-300 hover:-translate-y-2">
+                                <LaptopMockup className="bg-white">
+                                    <div className="flex h-full flex-col bg-slate-50">
+                                        {/* TaskPorta Mock Header */}
+                                        <div className="flex items-center justify-between border-b bg-white px-4 py-2">
+                                            <div className="flex items-center gap-2">
+                                                <div className="flex h-5 w-5 items-center justify-center rounded bg-brand-600 text-white">
+                                                    <CheckCircle2 className="h-3 w-3" />
                                                 </div>
-                                                <div className="grid grid-cols-4 gap-2">
-                                                    {[1, 2, 3, 4].map(i => (
-                                                        <div key={i} className="space-y-1">
-                                                            <div className="h-2 w-8 rounded bg-slate-200" />
-                                                            <div className="h-5 w-6 rounded bg-brand-100" />
+                                                <div className="h-2 w-20 rounded-full bg-slate-800" />
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="h-6 w-16 rounded border border-slate-200" />
+                                                <div className="h-6 w-6 rounded-full bg-lime-500" />
+                                            </div>
+                                        </div>
+                                        {/* TaskPorta Mock Content */}
+                                        <div className="flex-1 p-4 grid grid-cols-2 gap-4">
+                                            <div className="space-y-2">
+                                                <div className="h-3 w-24 rounded bg-slate-300" />
+                                                <div className="rounded-lg border border-slate-200 bg-white p-3">
+                                                    <div className="flex gap-2 mb-3">
+                                                        <div className="h-4 w-10 rounded bg-green-100" />
+                                                        <div className="h-4 w-10 rounded bg-purple-100" />
+                                                    </div>
+                                                    <div className="grid grid-cols-4 gap-2">
+                                                        {[1, 2, 3, 4].map(i => (
+                                                            <div key={i} className="space-y-1">
+                                                                <div className="h-2 w-8 rounded bg-slate-200" />
+                                                                <div className="h-5 w-6 rounded bg-brand-100" />
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="space-y-2">
+                                                <div className="h-3 w-24 rounded bg-slate-300" />
+                                                <div className="rounded-lg border border-slate-200 bg-white p-2 space-y-2">
+                                                    <div className="flex items-center gap-2 border-b border-slate-50 pb-2">
+                                                        <div className="h-4 w-4 rounded bg-orange-100" />
+                                                        <div className="flex-1 space-y-1">
+                                                            <div className="h-2 w-full rounded bg-slate-200" />
+                                                            <div className="h-2 w-2/3 rounded bg-slate-100" />
                                                         </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <div className="h-3 w-24 rounded bg-slate-300" />
-                                            <div className="rounded-lg border border-slate-200 bg-white p-2 space-y-2">
-                                                <div className="flex items-center gap-2 border-b border-slate-50 pb-2">
-                                                    <div className="h-4 w-4 rounded bg-orange-100" />
-                                                    <div className="flex-1 space-y-1">
-                                                        <div className="h-2 w-full rounded bg-slate-200" />
-                                                        <div className="h-2 w-2/3 rounded bg-slate-100" />
                                                     </div>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="h-4 w-4 rounded bg-orange-100" />
-                                                    <div className="flex-1 space-y-1">
-                                                        <div className="h-2 w-full rounded bg-slate-200" />
-                                                        <div className="h-2 w-2/3 rounded bg-slate-100" />
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="h-4 w-4 rounded bg-orange-100" />
+                                                        <div className="flex-1 space-y-1">
+                                                            <div className="h-2 w-full rounded bg-slate-200" />
+                                                            <div className="h-2 w-2/3 rounded bg-slate-100" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </LaptopMockup>
-                        </Link>
-                        <div className="text-center">
-                            <h3 className="text-lg font-bold text-slate-900">TaskPorta</h3>
-                            <p className="text-sm text-slate-500">タスク期限・担当者・アラートの可視化</p>
+                                </LaptopMockup>
+                            </Link>
+                            <div className="text-center">
+                                <h3 className="text-lg font-bold text-slate-900">TaskPorta</h3>
+                                <p className="text-sm text-slate-500">タスク期限・担当者・アラートの可視化</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,7 +251,7 @@ export default function Home() {
                 {/* Gredge Services Layer */}
                 <div className="space-y-6">
                     <div className="relative flex justify-center">
-                        <span className="bg-slate-50 px-3 text-sm font-semibold text-slate-500 uppercase tracking-wider">
+                        <span className="bg-white/50 px-3 text-sm font-semibold text-slate-500 uppercase tracking-wider backdrop-blur-sm rounded-full">
                             Gredge Life Support / 生活支援サービス
                         </span>
                     </div>
